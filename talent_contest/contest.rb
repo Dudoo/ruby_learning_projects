@@ -1,7 +1,8 @@
 require_relative 'judge'
 require_relative 'contestant'
+require_relative 'host'
 class Contest
-	attr_reader :name, :judges, :contestants, :reward
+	attr_reader :name, :judges, :contestants, :reward, :hosts
 	
 	def initialize(name, reward)
 		@name = name
@@ -9,6 +10,7 @@ class Contest
 		@contestants = []
 		@reward = reward
 		@winning_contestant = ""
+		@hosts = []
 	end
 	
 	def to_s
@@ -29,6 +31,10 @@ class Contest
 	
 	def add_contestants(contestants)
 		@contestants = contestants
+	end
+	
+	def add_hosts(hosts)
+	  @hosts = hosts
 	end
 	
 	def intro_judges

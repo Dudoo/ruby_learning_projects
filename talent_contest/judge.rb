@@ -16,7 +16,7 @@ class Judge
 	end
 	
 	def comment_on_performance(comment)
-		#implement this method
+		"#{name} says: #{comment}"
 	end
 		
 end

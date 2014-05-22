@@ -8,9 +8,12 @@ judge4 = Judge.new("adam")
 contestant1 = Contestant.new("dustin", "singer")
 contestant2 = Contestant.new("kellie", "dancer")
 
+host1 = Host.new("Carson Daly")
+
 contest1 = Contest.new("Who's Got Talent?", 50000)
 contest1.add_judges([judge1, judge2, judge3, judge4])
 contest1.add_contestants([contestant1, contestant2])
+puts host1
 puts contest1
 puts contest1.start_contest
 
@@ -25,7 +28,9 @@ puts performance1.start_performance
 puts performance1.end_performance
 
 puts judge1.score_performance(performance1, 10)
+puts judge1.comment_on_performance("You did a great job with your pitch on that song.")
 puts judge2.score_performance(performance1, 1)
+puts judge2.comment_on_performance("I thought that was just awful!")
 puts judge3.score_performance(performance1, 10)
 puts judge4.score_performance(performance1, 9)
 puts performance1.total_score
